@@ -102,6 +102,7 @@
             <img id="Scene-19" src="./Style/Images/Scene-19.jpg">
             <img id="Scene-20" src="./Style/Images/Scene-20.jpg">
             <img id="Scene-21" src="./Style/Images/Scene-21.jpg">
+            <img id="Scene-22" src="./Style/Images/Scene-22.jpg">
         </a-assets>
 
         <a-entity laser-controls="hand: left"
@@ -134,6 +135,13 @@
                 the_dote="Name_of_dote: Dote-3  ; Group_to_activate: Group-3 ; The_rotation: 0">
             </a-plane>
 
+            <a-plane data-clickable class="pintings clickable" position="-2.95046 -0.40924 -7.8509"
+                rotation="-87.1188057074368 -35.937058826195496 -53.55264623749265"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-22  ; Group_to_activate: Group-22 ; The_rotation: 0">
+            </a-plane>
+
+
 
 
 
@@ -160,6 +168,7 @@
                 the_dote="Name_of_dote: Dote-0  ; Group_to_activate: Group-0 ; The_rotation: 0">
             </a-plane>
 
+
         </a-entity>
 
         <!-- Group-2 -->
@@ -169,6 +178,13 @@
                 position="7.04555 -1.24896 1.57065" rotation="-80.78819502903636 -66.01390532379294 -22.18893653203139"
                 the_dote="Name_of_dote: Dote-1 ; Group_to_activate: Group-1 ; The_rotation: 0">
             </a-plane>
+
+            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="8.87654 -1.24896 -11.07594"
+                rotation="-80.78819502903636 -66.01390532379294 -22.18893653203139"
+                the_dote="Name_of_dote: Dote-22 ; Group_to_activate: Group-22 ; The_rotation: 0">
+            </a-plane>
+
 
         </a-entity>
 
@@ -330,11 +346,7 @@
                 the_dote="Name_of_dote: Dote-10 ; Group_to_activate: Group-10 ; The_rotation: 0">
             </a-plane>
 
-            <!-- <a-plane data-clickable="" class="Dote" material="src: [object HTMLImageElement]; transparent: true"
-              
-                the_dote="Name_of_dote: Dote-10; Group_to_activate: Group-10" geometry="" color="#fff" opacity="0.6"
-                event-set__mouseenter="[object Object]" event-set__mouseleave="[object Object]">
-            </a-plane> -->
+
 
 
         </a-entity>
@@ -509,10 +521,25 @@
                 the_dote="Name_of_dote: Dote-18  ; Group_to_activate: Group-18 ; The_rotation: 0">
             </a-plane>
 
+        </a-entity>
+        <!-- Group-20 -->
+        <a-entity scale="0 0 0" class="groups" id="Group-22" visible="false">
+
+            <a-plane data-clickable class="pintings clickable" position="4.23454 -0.49754 8.7843"
+                rotation="-85.36956555890241 -157.8292460779171 172.4620152077632"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-0  ; Group_to_activate: Group-0 ; The_rotation: 0">
+            </a-plane>
+
+
+            <a-plane data-clickable class="pintings clickable" position="-8.93046 -0.49754 8.67702"
+                rotation="-85.36956555890241 -157.8292460779171 172.4620152077632"
+                material="src: #Arrow-1; transparent:true"
+                the_dote="Name_of_dote: Dote-2  ; Group_to_activate: Group-2 ; The_rotation: 0">
+            </a-plane>
+
 
         </a-entity>
-
-
         <!-- ############################################################ -->
         <!-- ############################################################ -->
         <!-- ############################################################ -->
@@ -581,9 +608,9 @@
                 let TheRotation = this.data.The_rotation
                 let The_Arrow = this.el
                 this.el.setAttribute('color', '#fff')
-                this.el.setAttribute('opacity', '0.6')
-                this.el.setAttribute('event-set__mouseenter', "scale: 1.1 1.1 1.1 ; opacity : 0.6;  color: #ecca80")
-                this.el.setAttribute('event-set__mouseleave', "scale: 0.9 0.9 0.9 ; opacity : 0.6 ;  color: #fff")
+                this.el.setAttribute('opacity', '0.5')
+                this.el.setAttribute('event-set__mouseenter', "scale: 1.1 1.1 1.1 ; opacity : 1;  color: #fff")
+                this.el.setAttribute('event-set__mouseleave', "scale: 0.9 0.9 0.9 ; opacity : 0.5 ;  color: #fff")
                 this.el.addEventListener('click', (theDote) => {
 
                     the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
@@ -654,6 +681,9 @@
                             break;
                         case 'Dote-21':
                             the_sky.setAttribute('src', '#Scene-21')
+                            break;
+                        case 'Dote-22':
+                            the_sky.setAttribute('src', '#Scene-22')
                             break;
                         default:
                             break;
