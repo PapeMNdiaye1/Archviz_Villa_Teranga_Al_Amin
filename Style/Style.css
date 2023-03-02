@@ -29,6 +29,21 @@ html {
   cursor: none;
 }
 
+.the_blach_hover {
+  width: 100vw;
+  height: 0vh;
+  position: fixed;
+  z-index: 9;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition-duration: .6s, 0s;
+          transition-duration: .6s, 0s;
+  -webkit-transition-delay: 0s, 0s;
+          transition-delay: 0s, 0s;
+  -webkit-transition-property: opacity, height;
+  transition-property: opacity, height;
+}
+
 .a-loader-title {
   display: none;
   width: 0em;
