@@ -515,8 +515,6 @@
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-21  ; Group_to_activate: Group-21 ; The_rotation: 0">
             </a-plane>
-
-
         </a-entity>
 
         <!-- Group-19 -->
@@ -527,7 +525,6 @@
                 material="src: #Arrow-1; transparent:true"
                 the_dote="Name_of_dote: Dote-14  ; Group_to_activate: Group-14 ; The_rotation: 0">
             </a-plane>
-
 
         </a-entity>
 
@@ -635,8 +632,6 @@
                 let Group_to_activate = this.data.Group_to_activate
                 let TheRotation = this.data.The_rotation
                 let The_Arrow = this.el
-                // this.el.setAttribute('color', '#fff')
-                // this.el.setAttribute('opacity', '0.5')
                 this.el.setAttribute('event-set__mouseenter', "scale: 1.1 1.1 1.1 ; opacity : 1;  color: #fff")
                 this.el.setAttribute('event-set__mouseleave', "scale: 0.9 0.9 0.9 ; opacity : 0.5 ;  color: #fff")
                 this.el.addEventListener('click', (theDote) => {
@@ -722,6 +717,7 @@
                                 break;
                             default:
                                 break;
+
                         }
                         let the_group_to_activate = document.querySelector(`#${Group_to_activate}`)
 
