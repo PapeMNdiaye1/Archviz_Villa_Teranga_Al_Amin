@@ -154,7 +154,7 @@ html {
         background-size: 90%;
         background-position: center;
         transform: scale(1);
-        filter: invert(100%);
+        // filter: invert(100%);
         background-image: url('./Images/PNG/VR-icon.png');
 
         &:hover {
@@ -275,6 +275,7 @@ html {
     font-family: 'Roboto', sans-serif;
     border-radius: .5em;
     transition-duration: .1s;
+
 }
 
 .the_gallery_container {
@@ -420,6 +421,11 @@ html {
         img {
             transform: translate(0%, .5%);
         }
+    }
+
+    .the_info {
+
+        display: none;
     }
 
     .the_gallery_container {

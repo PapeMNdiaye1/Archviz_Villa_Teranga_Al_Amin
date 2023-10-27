@@ -197,8 +197,6 @@ html {
   background-position: center;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
   background-image: url("./Images/PNG/VR-icon.png");
 }
 
@@ -511,6 +509,9 @@ html {
   .The_Image img {
     -webkit-transform: translate(0%, 0.5%);
             transform: translate(0%, 0.5%);
+  }
+  .the_info {
+    display: none;
   }
   .the_gallery_container {
     position: absolute;
