@@ -32,6 +32,16 @@
         Villa F5 Teranga Al Amin: 04 chambres, double salon, cuisine équipée, piscine, garage dans une cité
         entièrement fermée.
     </div>
+    <div class='hover_loader_container'>
+        <div class='hover_loader'>
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
 
     <div class="the_gallery_container">
 
@@ -85,8 +95,7 @@
 
     </div>
 
-    <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse"
-        loading-screen="dotsColor:black; backgroundColor: #f1f1f1 ">
+    <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse" loading-screen="enabled:false">
         <a-assets>
             <img id="Arrow-1" src="./Style/Images/PNG/Arrow-1.png">
             <img id="Arrow-2" src="./Style/Images/PNG/Arrow-2.png">
@@ -575,6 +584,8 @@
         <!-- ############################################################ -->
     </a-scene>
     <script>
+        let loaderContainer = document.querySelector('.hover_loader_container')
+
         let groups = document.querySelectorAll('.groups')
         let theInfo = document.querySelector('.the_info')
         let theDescription = document.querySelector('.the_description')
@@ -586,6 +597,8 @@
         let TheImageBackCover = document.querySelector('.The_Image_Back_Cover')
         let oneImage = document.querySelectorAll('.oneImage')
         let theBlachHover = document.querySelector('.the_blach_hover')
+        let img_1 = document.querySelector('#Scene-0')
+
 
 
         theGallery.addEventListener('click', () => {
@@ -740,6 +753,17 @@
                 });
             }
         });
+        const theInt = setInterval(intFunc, 4000)
+
+        function intFunc() {
+            if (img_1.complete) {
+                loaderContainer.style.display = "none"
+                console.log(img_1.complete);
+                clearInterval(theInt);
+            } else {
+                console.log(img_1.complete);
+            }
+        }
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

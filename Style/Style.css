@@ -16,6 +16,136 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
+.hover_loader_container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f1f1;
+  position: absolute;
+  z-index: 1111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+}
+
+.hover_loader_container .hover_loader {
+  top: -4em;
+}
+
+.hover_loader_container .hover_loader .lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.hover_loader_container .hover_loader .lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: black;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.hover_loader_container .hover_loader .lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+          animation: lds-ellipsis1 0.6s infinite;
+}
+
+.hover_loader_container .hover_loader .lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.hover_loader_container .hover_loader .lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.hover_loader_container .hover_loader .lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+          animation: lds-ellipsis3 0.6s infinite;
+}
+
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
+}
+
 .canvas {
   background-color: red;
 }
@@ -56,18 +186,20 @@ html {
 
 .a-enter-vr {
   background: rgba(55, 55, 60, 0);
+  background-image: url("./Images/PNG/VR-icon.png");
+  display: none;
 }
 
 .a-enter-vr .a-enter-vr-button {
   background: rgba(55, 55, 60, 0);
   border-radius: 0%;
-  background-image: url("./Images/PNG/VR-icon.png");
   background-size: 90%;
   background-position: center;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-filter: invert(100%);
           filter: invert(100%);
+  background-image: url("./Images/PNG/VR-icon.png");
 }
 
 .a-enter-vr .a-enter-vr-button:hover {
@@ -350,16 +482,15 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: .2em;
   bottom: calc(2% + 0em);
-  right: calc(2% + 4em);
+  right: calc(2% + 0em);
   z-index: 10;
   padding: .3em;
   color: #f1f1f1;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   text-decoration: none;
-  background-image: url("./Images/PNG/AV.svg");
+  background-image: url("./Images/PNG/favicon.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -413,13 +544,21 @@ html {
         -ms-flex-align: center;
             align-items: center;
   }
+  .a-enter-vr {
+    background-image: url("./Images/PNG/VR-icon.png");
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .link_to_archviz {
     left: 50%;
-    -webkit-transform: translate(-50%, -5%);
-            transform: translate(-50%, -5%);
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
     -webkit-filter: invert(0);
             filter: invert(0);
-    display: none;
+    bottom: 1em;
+    right: none;
+    left: 1em;
   }
 }
 /*# sourceMappingURL=Style.css.map */
